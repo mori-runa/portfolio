@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+article{
+    padding-top: 70px;
+}
+
+article .flex{
+    justify-content: space-around;
+}
+
+section .flex{
+    justify-content: left;
+}
+
+section{
+    border-bottom: 3px dotted #EAD3E7;
+    padding: 40px 0;
+}
+
+.first{
+    padding-top: 0;
+}
+
+.last{
+    border-bottom: none;
+}
+
+section .visual{
+    width: 50%;
+}
+
+section .detail{
+    width: 50%;
+    margin-left: 20px;
+    color: #636362;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+section img{
+    width: 100%;
+}
+
+section a{
+    display: block;
+    border-radius: 13px;
+    text-align: center; 
+}
+
+section a:hover{
+    opacity: 0.7;
+}
+
+section .flex{
+    flex-wrap: wrap;
+}
+
+section .tec{
+    margin-left: 5px;
+}
+
+section .tec li{
+    font-size: 12px;
+    border: 1px dotted #686868;
+    border-radius: 8px;
+    padding: 4px 6px;
+    margin-left: 4px;
+    font-family: Arial;
+}
+
+section .tec .web{
+    color: #0036d9;
+    opacity: 0.7;
+}
+
+section .tec .banner{
+    color: #00dcbb;
+    opacity: 0.7;
+}
+
+section .tec .poster{
+    color: #5fcd4e;
+    opacity: 0.7;
+}
+
+section .tec .res{
+    color: #d90094;
+    opacity: 0.7;
+}
+
+section .tec .html{
+    color: #ec0005;
+    opacity: 0.7;
+}
+
+section .tec .css{
+    color: #cfbc00;
+    opacity: 0.7;
+}
+
+section .tec .js{
+    color: #368d00;
+    opacity: 0.7;
+}
+
+section .tec .illust{
+    color: #ec6d00;
+    opacity: 0.7;
+}
+
+section .tec .photo{
+    color: #7200bc;
+    opacity: 0.7;
+}
+
+h4{
+    margin: 10px 0 20px;
+    color: #3c6596;
+    font-size: 18px;
+}
+
+.detail dt{
+    margin: 10px 0;
+    font-size: 16px;
+    color: #8C8C8C;
+}
+
+.detail dt::before{
+    content: "⚪︎";
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.detail dd{
+    margin: 10px 0 20px 18px;
+    letter-spacing: 0.2em;
+    font-size: 14px;
+}
+
+.detail dl span{
+    margin: 0 3px;
+}
+
+
+.detail .choices{
+    margin: 10px 0;
+}
+
+.detail .choices li{
+    margin-left: 10px;
+    padding: 8px;
+}
+
+.detail .choices .yes{
+    margin-left: 10px;
+    padding: 8px;
+    background-color: #EAD3E7;
+    border-radius: 12px;
+}
+
+.detail .choices .no{
+    color: #AFAFAF;
+}
+
+.detail p{
+    margin: 10px;
+    line-height: 1.5em;
+    letter-spacing: 0.15em;
+}
+
+@media screen and (max-width: 759px) {
+
+    .flex2{
+        display: block;
+        margin: 0 auto;
+    }
+    
+
+    section .visual{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    section .detail{
+        width: 90%;
+        margin: 20px 20px 0 40px;
+    }
+
+}

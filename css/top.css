@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+/* About me */
+
+.about-me, .works, .contact  {
+    padding-bottom: 70px;
+}
+
+.about-me .flex{
+    justify-content: space-around;
+    align-items: center;
+}
+.visual{
+    margin-top: 70px;
+}
+
+.visual p{
+    width: 100vw;
+    text-align: center;
+    margin-top: 70px;
+}
+.visual img{
+    width: 80%;
+}
+
+.about-me img{
+    width: 400px;
+}
+
+.self{
+    text-align: center;
+}
+
+.self .letter{
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    line-height: 35px;
+    color: #686868;
+    margin: 0 7px 20px;
+}
+
+.self .letter span{
+    background:linear-gradient(transparent 60%, #ff6 60%);
+}
+
+.works{
+    text-align: center;
+}
+
+.works .flex{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.works section{
+    width: 300px;
+    margin: 0 10px 50px;
+}
+
+.works .space{
+    margin-bottom: 40px;
+}
+
+.works img{
+    width: 300px;
+}
+
+.works a{
+    display: block;
+}
+
+.works a:hover{
+    opacity: 0.7;
+}
+
+.works section .flex{
+    justify-content: flex-start;
+    margin-left: 5px;
+}
+
+.tec li{
+    font-size: 10px;
+    border: 1px dotted #686868;
+    border-radius: 5px;
+    padding: 2px 4px;
+    margin: 5px 1px 0;
+    font-family: Arial;
+}
+
+section .flex{
+    justify-content: start;
+}
+
+article .tec .web{
+    color: #0036d9;
+    opacity: 0.7;
+}
+
+article .tec .banner{
+    color: #00dcbb;
+    opacity: 0.7;
+}
+
+article .tec .poster{
+    color: #5fcd4e;
+    opacity: 0.7;
+}
+
+article .tec .res{
+    color: #d90094;
+    opacity: 0.7;
+}
+
+article .tec .html{
+    color: #ec0005;
+    opacity: 0.7;
+}
+
+article .tec .css{
+    color: #cfbc00;
+    opacity: 0.7;
+}
+
+article .tec .js{
+    color: #368d00;
+    opacity: 0.7;
+}
+
+article .tec .illust{
+    color: #ec6d00;
+    opacity: 0.7;
+}
+
+article .tec .photo{
+    color: #7200bc;
+    opacity: 0.7;
+}
+
+.contact .letter{
+    margin: 0 20px 10px;
+}
+
+.contact .my_ph{
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 959px) {
+    .about-me .flex{
+        display: block;
+    }
+
+    .about-me .my_ph{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+
+    .about-me .self .letter{
+        letter-spacing: 0.01em;
+    }
+
+    .contact .letter{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (max-width: 499px) {
+
+    .inner2{
+        width: 90%;
+    }
+
+    .about-me .my_ph img{
+        width: 300px;
+    }
+
+    .about-me .responsive{
+        text-align: center;
+    }
+    
+	.fadeUp{
+        display: block;
+    }
+
+    .about-me .letter{
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .icons{
+        flex-wrap: wrap;
+    }
+
+    .icons li img{
+        width: 32px;
+    }
+
+    .skill p{
+        font-size: 12px;
+    }
+
+    .skill span{
+        font-size: 14px;
+    }
+
+    .news dl dt{
+        font-size: 12px;
+    }
+
+    .news dl dd{
+        padding-left: 0;
+        font-size: 12px;
+    }
+    
+}
+
+

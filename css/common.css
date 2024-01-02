@@ -1,0 +1,427 @@
+@charset "UTF-8";
+
+/* リセットの記述 */
+body,h1,h2,h3,p,ul,dl,dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img{
+    vertical-align: bottom;
+        /* 写真の余白をなくす */
+}
+
+a{
+    text-decoration: none;
+        /* リンクの下線をなくす */
+    font-style: normal;
+        /* 文字が斜めになっているところをまっすぐにする */
+}
+
+/* 全体に対する指定 */
+*{
+    box-sizing: border-box;
+        /* ボックスの計算を枠含む */
+}
+
+body{
+    font-size: 16px;
+    color: #686868;
+    line-height: 1;
+        /* 行間をなしにする。必要な個所で修正する */
+    /* font-family: YuGothic,"游ゴシック体","Yu Gothic","游ゴシック",Arial,"メイリオ",Meiryo,sans-serif; */
+    font-family : YuMincho , "ヒラギノ明朝 ProN", "MS明朝" , serif ;
+    font-weight: 500;
+    background-color: #ffffff;
+}
+
+/* 使いまわし */
+.inner{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.inner2{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex2{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+
+/* ヘッダー */
+header{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 50px 5px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+}
+
+header .flex{
+    justify-content: space-around;
+}
+
+h1{
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
+    align-items: flex-end;
+}
+
+h1 a{
+    display: block;
+    transition: background-color 0.2s;
+}
+
+h1 a:hover{
+    background: url(../images/logo_hover.svg) center center / contain no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.icon{
+    align-items: flex-end;
+}
+
+.icon img{
+    width: 100%;
+    height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+.font{
+    font-family: 'Sacramento', cursive;
+}
+
+header p{
+    padding-bottom: 5px;
+    letter-spacing: 0.05em;
+}
+
+nav{
+    height: 50px;
+}
+
+nav ul{
+    margin-top: 30px;
+}
+
+nav ul li{
+    width: 85px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin: 0 5px;
+}
+
+nav ul .curent{
+    color: #3c6596;
+    font-weight: bold;
+}
+
+nav ul li a{
+    color: #d081cb;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+nav ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #4f372d;
+    border-radius: 10px;
+    
+}
+
+.nav-toggle{
+    display: none;
+        /* 作成出来たらチェックボックスを非表示にする */
+}
+
+
+/* フッター部分 */
+footer{
+    background-color: #EAD3E7;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.copyright{
+    font-size: 12px;
+    color: #f2f2f2;
+    padding-top: 10px;
+}
+
+/* トップに戻るボタン */
+.toTop{
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+        /* ボタンの固定 */
+        /* 画面の位置を基準としている */
+}
+
+.toTop a{
+    display: block;
+}
+
+.toTop a:hover{
+    opacity: 0.7;
+}
+
+/* 共通設定 */
+
+article{
+    text-align: center;
+}
+
+.h2{
+    margin: 70px auto 30px;
+    display: inline-block;
+}
+
+h2{
+    display: inline;
+    width: 300px;
+    height: 45px;
+    font-size: 35px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #C850C0 30%, #FFCC70);
+    background: -webkit-linear-gradient(0deg, #C850C0 30%, #FFCC70);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sav{
+    text-align: center;
+    color: #636362;
+    font-size: 12px;
+}
+
+.sav::before{
+    content: "---";
+    letter-spacing: 0.2em;
+    padding-right: 2px;
+}
+
+.sav::after{
+    content: "---";
+    letter-spacing: 0.2em;
+    padding-left: 2px;
+}
+
+article .btn{
+    display: inline-block;
+}
+
+.btn a{
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    padding: 5px 15px;
+    border: 1px solid #d081cb;
+    color: #d081cb;
+}
+
+.btn a:hover{
+    border-radius: 9px;
+    border: 1px solid #d081cb;
+    background-color: #d081cb;
+    color: #fff;
+    
+}
+
+/* .bg{
+    background-color: #fef4fe97;
+} */
+
+
+@keyframes fadeUpAnime{
+    from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 1s,visibility 1s, transform 1s;
+    }
+
+    to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    }
+}
+
+.js-fade {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 1s,visibility 1s, transform 1s;
+}
+
+.scroll {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+@media screen and (max-width: 959px) {
+
+    .inner{
+        width: 100%;
+    }
+
+    .inner2{
+        width: 100%;
+    }
+	header{
+        width: 100%;
+    }
+
+    main{
+        width: 100vw;
+    }
+
+    .visual img{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 759px) {
+
+    nav{
+        background-color: rgba(68, 68, 68, 0.7);
+            /* 半透明の色を選択したいときはrgbaを使う */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+            /* ナビゲーションが上に固定される */
+        margin: 0;
+            /* 元々あったページの上にnavが重なってる状態 */
+        padding-top: 100px;
+            /* 完成形のnavの上側の設定 */
+            display: none;
+            /* 作ったら一回非表示にする */
+    }
+
+    nav ul li a{
+        color: #fff;
+    }
+
+    nav ul li a:hover{
+        color: rgba(255, 255, 255, 0.6);
+            /* マウスカーソルをのせたときに色を透かせる */
+        background: transparent;
+            /* 元の背景色を打ち消すための記述 */
+    }
+
+    /* ナビを横から縦に変更 flex-directionで */
+    nav ul{
+        flex-direction: column;
+            /* 横並びから縦並びにする */
+    }
+
+    /* ボーダーを取り払う */
+    nav ul li{
+        border: none;
+        background-color: transparent;
+            /* 背景を透明にして線をなくす */
+        width: auto;
+            /* 横幅を指定する前の状態にする */
+        line-height: 60px;
+            /* 一つ一つのボタンの大きさを確保する */
+    }
+
+    /* ボタンを押すとnavが消えるようにする navタグを修正 */
+    
+    .nav-toggle:checked ~ nav{
+        display: block;
+    }
+    .btn-burger{
+        display: block;
+            /* インラインからブロックに */
+        width: 30px;
+        height: 30px;
+            /* 空箱を用意する */
+        position: fixed;
+            /* 画面に対して設定する */
+        top: 22px;
+        right: 22px;
+            /* どこに指定するか指示する */
+            background-image: url(../images/burger_open.png);
+            z-index: 20;
+            /* ハンバーガーボタンをnavの前に持ってくる */
+    }
+
+
+    /* ハンバーガーボタンを押したらチェックボックスにチェックが入る */
+    .nav-toggle:checked ~ .btn-burger{
+            /* チェックが入っているときのハンバーガーボタン */
+        background-image: url(../images/burger_close.png);
+    }
+
+    .toTop{
+        position: fixed;
+        right: 30px;
+        bottom: 50px;
+            /* ボタンの固定 */
+            /* 画面の位置を基準としている */
+    }
+
+    .toTop img{
+        width: 40px;
+    }
+    
+    .toTop a{
+        display: block;
+    }
+
+}
+
+
+@media screen and (max-width: 499px) {
+    .inner{
+        width: 100%;
+    }
+
+    .inner2{
+        width: 100%;
+    }
+
+    h1,h1 a{
+        height: 30px;
+    }
+
+    header .icon{
+        margin-top: 15px;
+    }
+
+}
+
+
+
+
+
