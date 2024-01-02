@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Aqua</title>
+     <!-- ↓キーワードとページの説明 -->
+    <meta name="keywords" content="Aqua,水族館,魚,東京都">
+    <meta name="description" content="Aquaの公式ホームページです。" >
+     <!-- ↓レスポンシブ対応のページを作るにあたって必要な設定 -->
+          <!-- 1でも1.0でも一緒 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- ↓電話番号をタップすると電話がかけられる機能をOFFにする記述 -->
+    <meta name="format-detection" content="telephone=no">
+     <!-- ↓ファビコンの設置 -->
+        <!-- ブラウザのところに現れるアイコン -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <!-- webページをスマホでホーム画面に追加したときのアイコン -->
+     <!-- ↓CSSファイルの読み込み -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ▼ ヘッダー(全ページ共通部分) -->
+    <header class="header">
+        <h1 class="logo">
+            <a href="./index.html">
+                <img src="img/logo.svg" alt="Aqua">
+            </a>
+        </h1>
+        <!-- ↓ここにハンバーガーボタンを設置 -->
+        <input type="checkbox" name="novToggle" id="navToggle" class="nav-toggle">
+            <!-- 兄 -->
+        <label for="navToggle" class="btn-burger"></label>
+            <!-- 弟 -->
+            <!-- inputとlabelを別で書いて連動させる書き順も大事 -->
+            <!-- headerの中にnavを入れること -->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li>ホーム</li>
+                <li><a href="guide/index.html">営業案内</a></li>
+                <li><a href="contact/index.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ▼ メインコンテンツ(ページ固有部分) -->
+    <main>
+        <div class="top"></div>
+
+        <section class="section">
+            <h2 class="heading-section">
+                <img src="img/ttl_recommend.svg" alt="AQUAの見どころ">
+            </h2>
+            <div class="row">
+                <section class="col">
+                    <figure class="col-image">
+                        <img src="img/img_01.png" alt="色あざやかな魚たち">
+                    </figure>
+                    <h3 class="heading-topic">色あざやかな魚たち</h3>
+                    <p>巨大アクリルパネルからは感動的な光景が一望できます。<br>
+                    美しい色の魚をお楽しみください。</p>
+                </section>
+
+                <section class="col">
+                    <figure class="col-image">
+                        <img src="img/img_02.png" alt="様々な魚たち">
+                    </figure>
+                    <h3 class="heading-topic">様々な魚たち</h3>
+                    <p>Aquaでは様々な魚たちを見ることができます。
+                    サンゴ礁やイソギンチャクも多様な種類ご覧になれます。</p>
+                </section>
+
+                <section class="col">
+                    <figure class="col-image">
+                        <img src="img/img_03.png" alt="ウツボ">
+                    </figure>
+                    <h3 class="heading-topic">海のギャング、ウツボ</h3>
+                    <p>岩礁から突如現れるウツボ。<br>
+                    肉食で獰猛なウツボの貴重な生態を存分にご覧ください。</p>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <!-- ▼ フッター(全ページ共通部分) -->
+    <footer class="footer">
+        <p class="footer-logp">
+            <a href="./index.html">
+                <img src="img/logo.svg" alt="AQUA">
+            </a>
+        </p>
+        <address class="footer-address">
+            〒123-4567 東京都中区舟入中町4-40<br>
+            TEL・FAX 03-1234-xxxx
+        </address>
+        <div class="footer-sns">
+            <a href="#"><img src="img/btn_facebook.svg" alt="facebook"></a>
+            <a href="#"><img src="img/btn_instagram.svg" alt="instagram"></a>
+        </div>
+        <p class="copyright">
+            <small>&copy;Copyright 2019 MdN Corporation.</small>
+        </p>
+    </footer>
+</body>
+</html> 

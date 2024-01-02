@@ -1,0 +1,360 @@
+@charset "UTF-8";
+
+/* サイト全体を通して共通になる内容をかく */
+/* ほか、複数のページで使いまわしたいような指示 */
+
+/* リセットの記述 */
+body,h1,h2,h3,p,ul,dl,dd,figure{
+    margin: 0;
+    padding: 0;
+        /* 余白をなくす */
+    list-style: none;
+        /* リストの黒点削除 */
+}
+
+img{
+    vertical-align: bottom;
+        /* 写真の余白をなくす */
+}
+
+a{
+    text-decoration: none;
+        /* リンクの下線をなくす */
+    font-style: normal;
+        /* 文字が斜めになっているところをまっすぐにする */
+}
+
+/* 全体に対する記述 */
+*{
+    box-sizing: border-box;
+        /* ボックスの計算を枠含む */
+}
+
+body{
+    font-size: 16px;
+    line-height: 1;
+        /* 行間をなしにする。必要な個所で修正する */
+    font-family: YuGothic,"游ゴシック体","Yu Gothic","游ゴシック",Arial,"メイリオ",Meiryo,sans-serif;
+        /* Mac英,Mac日,Win英,Win日,ここからは保険で */
+    font-weight: 500;
+        /* ノーマルの状態だとWinの場合はやや細くなるのでセットで入れる */
+    color: #333;
+    background-color: transparent;
+        /* 背景色は透明にする */
+}
+
+/* 使いまわしがきくクラスの指定 */
+.inner{
+    width: 960px;
+        /* PC盤 */
+    margin: 0 auto;
+        /* 幅を指定して真ん中に寄せる */
+}
+
+.inner2{
+    width: 720px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+        /* 横並びにした後左右に広げる */
+}
+
+.bg-orange{
+    background-color: #ff783c;
+    color: #fff;
+}
+
+.bg-stars{
+    background: url(../images/bg_stars.svg) center center,
+    #2679b2;
+    color: #fff;
+}
+
+/* ヘッダータグ */
+header{
+    padding: 10px 0;
+    border-bottom: 3px solid #fff100;
+    position: fixed;
+    top: 0;
+    left: 0;
+        /* 固定するために浮かせる */
+    width: 100%;
+        /* fixedさせると小さくなるので必ずwidthも入れる */
+    z-index: 1;
+        /* positionと必ずセットで使う */
+        /* レイヤーの重なり順を一番上にする */
+}
+
+header h1{
+    margin-bottom: 10px;
+}
+
+header a{
+    color: #fff;
+    transition: all 0.2s;
+        /* 変わる前の時にいうことで置くとき離すときの変化になる */
+}
+
+/* サブナビゲーションの配置 */
+header .inner{
+    position: relative;
+        /* 位置の基準 */
+}
+
+.s-nav{
+    position: absolute;
+    top: 10px;
+    right: 0;
+        /* innerの上に浮かして上から１０、右から０ */
+    font-size: 12px;
+}
+
+.s-nav li{
+    margin-left: 1em;
+        /* 枠外に余白 */
+}
+
+.s-nav li a:hover{
+    color: rgba(255,255,255,0.5);
+        /* 50パー透けた白に設定 */
+}
+
+/* グローバルナビゲーション */
+nav ul li{
+    /* 一つ一つのボタンに指示 */
+    width: 192px;
+    text-align: center;
+        /* 文字を真ん中にする */
+    border-left: 1px solid #fff;
+    font-size: 14px;
+    line-height: 2;
+        /* ボタンの高さ */
+}
+
+nav ul li:last-child{
+    border-right: 1px solid #fff;
+}
+
+nav ul li a{
+    display: block;
+        /* 親の中でめいいっぱい幅を広げてボタンを押せるようにする */
+}
+
+nav ul li a:hover{
+    background-color: rgba(255,255,255,0.2);
+}
+
+nav ul .curent{
+    /* ページによって変わるところを指定 */
+    color: #fff100;
+    font-weight: bold;
+}
+
+/* フッター部分 */
+footer{
+    padding: 50px 0 110px 0;
+        /* 上　右　下　左 */
+    border-top: 3px solid #fff100;
+    font-size: 14px;
+}
+
+footer a{
+    transition: 0.2s;
+    color: #fff;
+}
+
+footer .logo{
+    width: 350px;
+    height: auto;
+        /* 親である箱のサイズのみが大きくなった状態 */
+    margin: 30px;
+}
+
+footer .logo img{
+    width: 100%;
+        /* 親要素の100% */
+        /* 小さい画像を大きく伸ばすことができるのはSVGの特徴 */
+}
+
+.footer-wrap{
+    margin-bottom: 50px;
+    align-items: center;
+    /* 箱の中心を真ん中にする */
+}
+
+footer .access{
+    line-height: 2;
+    /* 行間を保つ */
+}
+
+footer .access span{
+    display: inline-block;
+        /* spanハインラインなので */
+    width: 8em;
+    text-align-last: justify;
+        /* 一行に対しては最終行とみなされるのでlastにして均等に幅を広げる */
+    font-weight: bold;
+        /* 文字を太く */
+    margin-right: 1em;
+}
+
+/* spanもインラインの要素なので横並びになる */
+.insta span{
+    display: block;
+        /* 横並びの関係を解除する */
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.insta{
+    text-align: center;
+        /* 画像と文字を真ん中にする */
+}
+
+.insta a:hover{
+    opacity: 0.5;
+        /* 画像をすかすことができる */
+}
+
+.sitemap{
+    justify-content: flex-start;
+        /* flexで全体的に広がるようにしているのを左端詰まりの横並びにする */
+    margin-bottom: 50px;
+        /* 箱の外余白 */
+    font-weight: bold;
+}
+
+.sitemap > li{
+    /* sitemapの子要素のliのみ */
+    margin-right: 2em;
+}
+
+.sitemap li ul{
+    padding-top: 12px;
+    font-weight: 500;
+        /* nomalだと細すぎるので５００ */
+    line-height: 2;
+    font-size: 12px;
+}
+
+.sitemap ul li a::before{
+    content: "-";
+    margin-right: 0.5em;
+}
+
+.sitemap ul li a:hover{
+    color: rgba(255,255,255,0.5);
+}
+
+.copyright{
+    text-align: center;
+        /* 文字を真ん中に持ってくる */
+}
+
+.copyright small{
+    font-size: 11px;
+}
+
+/* トップに戻るボタンの配置 */
+.to-top{
+    position: fixed;
+    right: 50px;
+    bottom: 110px;
+        /* ボタンの固定 */
+        /* 画面の位置を基準としている */
+}
+/* コンタクトバーの指定 */
+.contact-ber{
+    background-color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* 浮かして常に下に固定 */
+    width: 100%;
+}
+
+.contact-ber .flex{
+    width: 500px;
+    margin: 0 auto;
+}
+
+address{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+address span{
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+        /* インラインをぶっロックにして改行させる */
+    margin-top: 4px;
+}
+
+.button{
+    background: url(../images/icon_submit.png) center left 15px no-repeat,
+    linear-gradient(#fcaa02,#ff783c 70%);
+        /* 紙飛行機を追加する（）位置　位置　大きさ　リピートなし */
+        /* グラデーションにする（方向,色　始点の配置,色　終点の配置） */
+        /* 背景の要素を重ね塗りすることができる */
+        /* 先に書いたものが上にくる */
+    width: 250px;
+    line-height: 40px;
+        /* 文字の上下に均等に余白がついたうえでの高さ指定 */
+    border-radius: 10px;
+        /* 角を丸くする */   
+    text-align: right;
+        /* テキストを右寄せ */
+}
+
+.button a{
+    color: #fff;
+    padding: 0 1.5em;
+        /* 左右に余白 */
+    display: block;
+        /* インラインをブロックに変えて親要素いっぱいいっぱいにボタンを広げる */
+    transition: text-shadow 0.2s;
+        /* ふわっと光るようにする */
+}
+
+.button a:hover{
+    text-shadow: 0 0 3px #fff;
+        /* 文字に影をつける　X　Y　ぼかしの半径　色 */
+}
+
+/* 三角付きのボタン */
+.btn a{
+    display: inline-block;
+    width: 192px;
+    line-height: 34px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid #3f89c3;
+    color: #3f89c3;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        /* ブロックの影（オフセット　ぼかし半径　広がり　色　固定値） */
+    transition: background-color 0.2s;
+    text-align: center;
+        /* 文字を真ん中にする */
+}
+
+.btn a:hover{
+    background-color: #fff100;
+}
+.btn a::after{
+    content: "▲";
+    font-size: 12px;
+        /* 文字として扱われているので */
+    display: inline-block;
+        /* 箱の姿を持った▲にする */
+    transform: rotate(90deg);
+        /* 90度回転させる */
+    margin-left: 10px;
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Aqua - 営業案内ページ</title>
+    <meta name="keywords" content="Aqua,水族館,魚,東京都,営業案内">
+    <meta name="description" content="Aquaの営業案内ページです。" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- ▼ ヘッダー(全ページ共通部分) -->
+    <header class="header">
+        <h1 class="logo">
+            <a href="../index.html">
+                <img src="../img/logo.svg" alt="Aqua">
+            </a>
+        </h1>
+        <input type="checkbox" name="navToggle" id="navToggle" class="nav-toggle">
+        <label for="navToggle" class="btn-burger"></label>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="../index.html">ホーム</a></li>
+                <li>営業案内</li>
+                <li><a href="../contact/index.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ▼ メインコンテンツ(ページ固有部分) -->
+    <main>
+        <section class="section">
+            <h2 class="heading-section">
+                <img src="img/ttl_open_time.svg" alt="営業時間">
+            </h2>
+            <div class="open-time">
+                <ul class="open-time-list">
+                    <li>営業時間：9:00 ~ 17:00</li>
+                    <li>休館日：火曜日、木曜日</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="heading-section">
+                <img src="img/ttl_price.svg" alt="入館料">
+            </h2>
+            <table class="price-table">
+                <thead>
+                    <!-- tableの上の部分 -->
+                    <tr>
+                        <th>区分</th>
+                        <th>個人</th>
+                        <th>団体（10名以上）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- tableの下の部分 -->
+                    <tr>
+                        <th>一般</th>
+                        <td>1,200円</td>
+                        <td>1,000円</td>
+                    </tr>
+                    <tr>
+                        <th>中学生</th>
+                        <td>600円</td>
+                        <td>500円</td>
+                    </tr>
+                    <tr>
+                        <th>小学生以下</th>
+                        <td>400円</td>
+                        <td>200円</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- ▼ フッター(全ページ共通部分) -->
+    <footer class="footer">
+        <p class="footer-logo">
+            <a href="../index.html">
+                <img src="../img/logo.svg" alt="AQUA">
+            </a>
+        </p>
+        <address class="footer-address">
+            〒123-4567 東京都中区舟入中町4-40<br>
+            TEL・FAX 03-1234-xxxx
+        </address>
+        <div class="footer-sns">
+            <a href="#"><img src="../img/btn_facebook.svg" alt="facebook"></a>
+            <a href="#"><img src="../img/btn_instagram.svg" alt="instagram"></a>
+        </div>
+        <p class="copyright"><small>&copy;Copyright 2019 MdN Corporation.</small></p>
+    </footer>
+</body>
+</html> 

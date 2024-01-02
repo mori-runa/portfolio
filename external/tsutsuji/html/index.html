@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>つつじ幼稚園</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+            <!-- hesderはいっぱいに画像を広めてロゴとnavを縮める -->
+        <div class="inner flex">
+            <h1>
+                <img src="images/logo_header.png" alt="つつじ幼稚園">
+            </h1>
+            <nav>
+                <ul class="flex">
+                        <!-- 画像を入れたいからliにclassを作る -->
+                    <li class="nav01"><a href="#">入園案内</a></li>
+                    <li class="nav02"><a href="#">園の特色</a></li>
+                    <li class="nav03"><a href="#">年間行事</a></li>
+                    <li class="nav04"><a href="#">お問合せ</a></li>
+                    <li class="nav05"><a href="#">園バス</a></li>
+                        <!-- #は架空のリンク先 -->
+                </ul>
+            </nav> 
+        </div>
+    </header>
+        <div class="visual">
+            ふれあいと創造がこどもの心を育む
+                <!-- divタグをからのままで置いとくことはできるが本来の使い方としては何かあるほうが望ましい -->
+                <!-- からタグを使うならビフォーアフターで付けたほうがいい -->
+                <!-- CSSで背景を入れる -->
+        </div>
+    <main class="inner flex">
+            <!-- 見出しを持ってるのでsectionで囲む -->
+        <section>
+            <h2>教育目標</h2>
+                <p>つつじ幼稚園は『今やりたいこと、今できること』をスローガンに、「知育・徳育・体育」三位一体の教育を基本方針としています。</p>
+                <p>明るく正しく、また情操豊かな社会性を身につけ、健康で意志の強い子を育てること…それが一番の教育目標です。子ども達の大好きな遊びの中から、協調性や自立性を養い、友達の輪を広げ、思いやりのある子に育てたい。そのために一部縦割り保育も行っています。</p>
+                <p>つつじ幼稚園は、一人ひとりの子どもの力が開花し育つ手助けをする、東京都公認の幼稚園です。</p>
+            <figure>
+                <img src="images/img_child.jpg" alt="保育士と園児">
+            </figure>
+        </section>
+            <!-- 補足やトピックなのでasideを使う -->
+        <aside>
+             <!-- 上記より重要じゃないのでh3で囲う -->
+            <h3>トピックス</h3>
+                <p>園からのお知らせは「幼稚園便り」から、日々の様子は園ブログからお伝えします。</p>
+            <ul class="banner">
+                <li><img src="images/banner_topics.png" alt="幼稚園便り"></li>
+                <li><img src="images/banner_blog.png" alt="園ブログ"></li>
+            </ul>
+            <h3>今月の行事</h3>
+            <ul class="event">
+                <li>プール開き</li>
+                <li>消防署見学（年長組）</li>
+                <li>馬場なかよし公園遠足（年中組）</li>
+                <li>ゾウさん花だんの植えかえ</li>
+            </ul>
+            <table>
+                <tr>
+                        <!-- CSSで色を変えるからclass指定 -->
+                    <th class="sun">日</th>
+                    <th>月</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>木</th>
+                    <th>金</th>
+                    <th class="sat">土</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                        <!-- テーブルに欠けができるためタグのみ入れる -->
+                </tr>
+            </table>
+        </aside>
+    </main>
+    <footer>
+        <p><img src="images/logo_footer.png" alt="つつじ幼稚園"></p>
+        <p class="copyright"><small>&copy;2023 Tsutsuji Kindergarten, All rights reserved.</small></p>
+            <!-- ©は実体参照&copyに変換 -->
+    </footer>
+</body>
+</html>

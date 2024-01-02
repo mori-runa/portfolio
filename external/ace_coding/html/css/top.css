@@ -1,0 +1,417 @@
+@charset "UTF-8";
+
+/* トップページの固有の指定を書く */
+/* そのページだけに効けばいいような内容 */
+
+/* メインビジュアル */
+.visual{
+    background: url(../images/mv_pic.jpg) center center no-repeat;
+    /* 背景画像をセンターに差し込む */
+    min-height: 720px;
+    /* 画像の最低限の高さを指示する */
+    margin-top: 96px;
+}
+
+.to-news{
+    text-align: right;
+    padding-top: 30px;
+}
+
+.to-news a{
+    transition: opacity 0.2s;
+        /* 0.2かけて変わる */
+}
+
+.to-news a:hover{
+    opacity: 0.7;
+        /* 0.7色が薄くなる */
+}
+
+.mv-catch{
+    text-align: right;
+    padding-top: 60px;
+}
+
+.button a:hover{
+    text-shadow: 0 0 3px #fff;
+}
+
+/* 複数のページで使えそうなスタイル */
+
+/* 雲のライン */
+
+.cloud-line{
+    position: relative;
+        /* 浮かして移動させる場所の指示 */
+}
+
+.cloud-line::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    background: url(../images/line_cloud.png) center center;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+        /* 雲を少し下に設定する */
+}
+
+.to-news a:hover{
+    opacity: 0.7;
+}
+
+.mv-catch{
+    text-align: right;
+    padding-top: 60px;
+}
+
+/* ABOUTのエリア */
+h2{
+    text-align: center;
+}
+
+.m-about{
+    background-color: #fff;
+    padding: 50px 0 70px;
+    border-bottom: 3px solid #fff100;
+}
+
+.m-about h2{
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    text-shadow: 2px 2px 0 #fff100;
+        /* 右に２、下に２、ぼかしなし */
+    margin-bottom: 30px;
+        /* pとの距離を開ける */
+}
+
+.m-about h2 span{
+    display: inline-block;
+}
+
+/* A */
+.m-about h2 span:nth-child(1){
+        /* spanタグの初めの子要素 */
+    font-size: 36px;
+    color: #ff783c;
+    transform: rotate(-10deg);
+        /* 要素を回転させる */
+    margin-right: 5px;
+        /* Bとの距離をあける */
+}
+
+/* B */
+.m-about h2 span:nth-child(2){
+    color: #ff3b78;
+    transform: rotate(10deg);
+        /* 要素を回転させる */
+}
+
+/* O */
+.m-about h2 span:nth-child(3){
+    color: #04a5e9;
+    transform: rotate(-10deg);
+        /* 要素を回転させる */
+}
+
+/* U */
+.m-about h2 span:nth-child(4){
+    color: #aad127;
+    transform: rotate(8deg);
+        /* 要素を回転させる */
+    margin-right: 5px;
+}
+
+/* T */
+.m-about h2 span:nth-child(5){
+    color: #00aa64;
+    transform: rotate(-8deg);
+        /* 要素を回転させる */
+    margin-right: 15px;
+}
+
+/* U */
+.m-about h2 span:nth-child(6){
+    color: #0082ff;
+    transform: rotate(10deg);
+        /* 要素を回転させる */
+    font-size: 36px;
+}
+
+/* S */
+.m-about h2 span:nth-child(7){
+    color: #8c48ba;
+    transform: rotate(-10deg);
+        /* 要素を回転させる */
+    margin-left: 2px;
+}
+
+.m-about p{
+    line-height: 2;
+}
+
+
+/* 3つのポイントのエリア */
+.m-points{
+    padding: 30px 0 100px;
+}
+
+.m-points h2{
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+        /* 透けたグレーを影に */
+    width: max-content;
+        /* 横幅を縮めた。中身のギリギリの大きさまで縮める */
+    margin: 0 auto 30px;
+        /* 縮めたのを真ん中に持ってくる */
+}
+
+.pop-line{
+    display: block;
+        /* 下に改行させる */
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 50px;
+        /* 行間をあける */
+}
+
+.pop-line::before{
+    content: "";
+        /* 差し込むための箱を用意する */
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/pop_left_y.png) no-repeat;
+    vertical-align: -10px;
+        /* 位置を少し下げる */
+    margin-right: 5px;
+}
+
+.pop-line::after{
+    content: "";
+        /* 差し込むための箱を用意する */
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/pop_right_y.png) no-repeat;
+    vertical-align: -10px;
+        /* 位置を少し下げる */
+    margin-left: 5px;
+}
+
+.m-points .inner{
+    border-top: 4px dotted #fff;
+        /* ドットでの点線はブラウザで違うくなる */
+    padding-top: 50px;
+}
+
+.m-points .point{
+    width: 300px;
+    text-align: center;
+}
+
+.point h3{
+    font-size: 24px;
+    padding-bottom: 16px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+        /* 背景に影をつける */
+    position: relative;
+}
+
+.point h3::before{
+    content: "1";
+    font-family: Arial,sans-serif;
+    font-size: 56px;
+    font-weight: bold;
+    font-style: italic;
+        /* フォントを斜めにする */
+    text-stroke: 2px #fff;
+    -webkit-text-stroke: 2px #fff;
+        /* 白の縁取りがつく */
+    color: transparent;
+        /* 中の色を透明にする */
+    position: absolute;
+    left: 0;
+    top: -12px;
+        /* 浮かす基準を親要素に追加（relative）して配置する */
+}
+
+.course h3::before{
+    content: "1";
+    text-shadow: 2px 2px 0 #ff3b78;
+}
+
+.teacher h3::before{
+    content: "2";
+    text-shadow: 2px 2px 0 #ff783c;
+}
+
+.school h3::before{
+    content: "3";
+    text-shadow: 2px 2px 0 #00aa64;
+}
+
+.point h3::after{
+    content: "";
+    display: block;
+        /* widthとheightが指定できないのでブロックにする */
+    width: 300px;
+    height: 20px;
+    background: url(../images/line_yellow.png) no-repeat;
+}
+
+.point .text{
+    text-align: justify;
+        /* 文字を両端揃え */
+    line-height: 1.8;
+    padding: 16px 0;
+}
+
+/* ボタンの色をカスタム */
+.course .btn a{
+    color: #ff3b78;
+    border: 2px solid #ff3b78;
+}
+
+.teacher .btn a{
+    color: #ff783c;
+    border: 2px solid #ff783c;
+}
+
+.school .btn a{
+    color: #00aa64;
+    border: 2px solid #00aa64;
+}
+
+/* よくある質問エリア */
+.m-faq{
+    margin: 50px auto 70px;
+    background-color: #aad127;
+    box-shadow: 0 3px 0 0 #00aa64;
+    transition: background-colir 0.3s;
+}
+
+.m-faq a{
+    display: block;
+        /* 親に対してめいいっぱい広げる */
+    color: #fff;
+    font-weight: bold;
+    padding: 14px;
+}
+
+.m-faq:hover{
+    background-color: #84b125;
+}
+
+.m-faq div{
+    border: 2px solid #fff;
+    padding: 14px;
+    padding-left: 0;
+        /* ？で余白をとるため */
+    align-items: center;
+        /* 横並びにしたものを縦位置を真ん中 */
+}
+
+.m-faq div::before{
+    content: "?";
+    font-size: 88px;
+    text-shadow: 2px 2px 0 #00aa64;
+    display: block;
+    padding: 0 24px;
+}
+
+.m-faq dl{
+    border-left: 2px solid #fff;
+    padding-left: 24px;
+}
+
+.m-faq dt{
+    font-size: 32px;
+    text-shadow: 2px 2px 0 #00aa64;
+    margin-bottom: 14px;
+}
+
+.m-faq dd{
+    line-height: 1.8;
+}
+
+/* 下のボーダーを作る */
+.m-faq::after{
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 4px dotted #ccc;
+    position: relative;
+    top: 70px;
+        /* 元の位置からどのくらいずらすか */
+}
+
+/* 最新情報エリア */
+.m-news{
+    padding: 70px 0;
+}
+
+.m-news h2{
+    margin-bottom: 30px;
+}
+
+.m-news .pop-line{
+    color: #3f89c3;
+}
+
+.m-news .pop-line::before{
+    background: url(../images/pop_left_b.png)no-repeat;
+        /* 画像だけ差し替える */
+}
+
+.m-news .pop-line::after{
+    background: url(../images/pop_right_b.png)no-repeat;
+}
+
+.m-news .btn{
+    text-align: right;
+        /* ボタンを箱の右寄せにする */
+}
+
+.m-news dl{
+    border-bottom: 1px solid #ccc;
+    justify-content: flex-start;
+        /* flexかけたときに左から順番に並ぶ */
+    padding: 10px 0;
+    align-items: center;
+        /* 子要素の縦の中央揃え */
+}
+
+.m-news dl dt{
+    width: 100px;
+    background-color: #ccc;
+    text-align: center;
+        /* 文字を真ん中にする */
+    line-height: 32px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.m-news dl .type-1{
+    background-color: #ff3b78;
+}
+
+.m-news dl .type-2{
+    background-color: #04a5e9;
+}
+
+.m-news dl .type-3{
+    background-color: #00aa64;
+}
+
+.m-news dl dd{
+    margin-left: 1em;
+}
+
+.m-news .btn{
+    margin-top: 50px;
+}

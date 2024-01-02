@@ -1,0 +1,288 @@
+@charset "UTF-8";
+/*-------------------------------------------
+   reset CSS
+--------------------------------------------*/
+
+body,h1,h2,h3,p,ul,figure {
+  margin: 0;
+  padding: 0;
+  list-style-type:  none;
+}
+
+img {
+  vertical-align:bottom;
+}
+
+/*-------------------------------------------*/
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
+  color: #444;                           
+  font-size: 16px;                       
+  background-color: #ededed;            
+}
+
+/*-------------------------------------------*/
+
+.wrap {
+  width:  960px;                         
+  margin: auto;
+  background-color: #fff; 
+}
+
+/*-------------------------------------------*/
+
+header {
+  text-align: center;                    
+  padding: 15px 0;
+}
+
+/*-------------------------------------------*/
+
+div.mainVisual{
+  position: relative;
+}
+
+div.mainVisual p{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "游ゴシック","YuGothic";
+  color:#fff;
+  text-shadow: 0 0 6px rgba(0,0,0,.8); 
+  line-height: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 1;
+}
+
+div.mainVisual p span{
+  display: block;
+}
+
+
+/* ナビゲーション*/
+nav {
+  margin-top: 15px;
+  position: sticky;
+    /* スライドしたら一番上に固定 */
+  top: 0;
+  z-index: 1;
+    /* 一番上に固定 */
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  width: 192px;                          
+  line-height: 50px;                                       
+  box-sizing: border-box;                
+  text-align: center;
+}
+
+nav ul li a {
+  color: #444;
+  background-color: #fff;
+  text-decoration: none;                 
+  display: block;
+  border: 1px solid #444; 
+  border-right:  none;           
+                    
+}
+
+nav ul li:last-child a {
+  border-right: 1px solid #444;          
+}
+
+/* ナビゲーションのロールオーバー*/
+nav ul li a:hover {
+  background-color: #444;                
+  color: #fff;
+}
+
+/* ナビゲーションのカレント */
+nav ul li .current{
+  color: #4a8e25;
+  font-weight: bold;
+  background-color: #E1F6DA;
+}
+
+
+/* ドロップダウンメニュー */
+ul.drop{
+  display:none;
+}
+
+/* ドロップダウンメニューのスタイル指定*/
+ul.drop a {
+  display: block;
+  color: #FFF;
+  font-size:14px;
+  background-color: #666;            
+  border:1px solid #444;
+  border-top:none;              
+}
+
+/* ドロップダウンメニューのホバー時のスタイル*/
+ul.drop a:hover {
+  color:#aaa;
+}
+
+
+/* パンくずリスト */
+.bread {
+  display: flex;                         
+  font-size: 14px;
+  line-height: 3;                       
+  padding-left: 25px;              
+}
+
+.bread li::after {                       
+  content: ">";                          
+  margin: 0 3px;
+}
+
+.bread li:last-child::after {            
+  content: none;                         
+}
+
+.bread li a {
+  color: #444;                           
+  text-decoration: none;                 
+}
+
+
+/* パンくずリストのホバー時のスタイル */
+.bread li a:hover{                     
+  text-decoration: underline;                 
+}
+
+
+/* 見出し2 */
+h2 {
+  margin-bottom: 35px;                   
+}
+
+/* 見出し3 */
+h3{
+  color: #4a8e25;                        
+  font-size: 20px;
+  border-left: 5px solid #4a8e25;        
+  border-bottom: 1px solid #4a8e25;      
+  margin: 0 25px 30px;                   
+  padding-left: 5px;
+}
+
+h3 span {
+  border-left: 3px solid #4a8e25;        
+  display: block;                        
+  margin-left: 3px;                      
+  padding: 10px 25px;                    
+}
+
+
+/* 本文テキストまわりの余白*/
+.text {
+  margin:  0 50px 15px;                  
+}
+
+
+/* 画像を横並び*/
+.flex {
+  display: flex;                         
+  margin: 30px 50px 20px;
+  justify-content: space-between;        
+}
+
+
+/* 画像のキャプション*/
+figcaption {
+  font-size: 14px;
+  margin-top: 10px;                      
+  text-align: right;                     
+}
+
+figcaption::before {
+  content: "■";                         
+  margin-right: 3px;
+  font-size: 24px;
+}
+
+
+/* フッター*/
+footer {
+  background-color: #444;
+  color: #fff;
+  line-height: 25px;                     
+  text-align: right;                     
+  padding-right: 50px;
+}
+
+footer small {
+  font-size: 12px;
+}
+
+/* トップへ戻るボタンの配置 */
+.toTop{
+  text-align: right;
+  padding: 0 50px 30px 0;
+}
+
+.toTop img:hover{
+  cursor: pointer;
+}
+
+
+/* フェードアップアニメーションの動き */
+@keyframes fedeUp{
+
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+    /* 元の位置から50pxずらす */
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+    /* 色好きながら */
+  }
+
+}
+
+.animeTest{
+  animation-name: fadeUp;
+  /* どのアニメーションをよぶか */
+
+  animation-duration: 1s;
+  /* アニメーションそのものにかかる時間 */
+
+  /* animation-delay: 0s; */
+  /* アニメーションが再生されるまでの時間 */
+  /* すぐ再生される */
+
+  /* animation-play-state: running; */
+  /* アニメーションが再生されるか停止されるか */
+  /* 今回は再生 */
+
+  animation-timing-function: ease;
+  /* アニメーション再生のリズム感 */
+  /* 滑らかに始まり滑らかに終わる */
+
+  animation-fill-mode: forwards;
+  /* 終わった後に何がかかるか */
+  /* 再生後そのまま放置 */
+
+  /* animation-iteration-count: 1; */
+  /* アニメーションの再生回数。今回は一回。無限はinfinite */
+
+  /* animation-direction: normal; */
+  /* アニメーションの再生される向き */
+}
+
+/* 上記のanimationの省略形
+.animeTest{
+  animation: fadeUp 1s ease forwards;
+} */

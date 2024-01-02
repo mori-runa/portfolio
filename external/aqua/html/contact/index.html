@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Aqua - お問い合わせページ</title>
+    <meta name="keywords" content="Aqua,水族館,魚,東京都,お問い合わせ">
+    <meta name="description" content="Aquaのお問い合わせページです。" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- ▼ ヘッダー(全ページ共通部分) -->
+    <header class="header">
+        <h1 class="logo">
+            <a href="../index.html">
+                <img src="../img/logo.svg" alt="Aqua">
+            </a>
+        </h1>
+        <input type="checkbox" name="navToggle" id="navToggle" class="nav-toggle">
+        <label for="navToggle" class="btn-burger"></label>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="../index.html">ホーム</a></li>
+                <li><a href="../guide/index.html">営業案内</a></li>
+                <li>お問い合わせ</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- ▼ メインコンテンツ(ページ固有部分) -->
+    <main>
+        <section class="section">
+            <h2 class="heading-section">
+                <img src="img/ttl_contact.svg" alt="お問い合わせ">
+            </h2>
+            
+            <form>
+                <div class="form-group">
+                    <label for="yourName" class="form-label">お名前</label>
+                    <div class="form-col">
+                        <input type="text" name="お名前" id="yourName">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="yourEmail" class="form-label">E-Mail</label>
+                    <div class="form-col">
+                        <input type="email" name="E-Mail" id="yourEmail">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="yourInquiry" class="form-label">お問い合わせ内容</label>
+                    <div class="form-col">
+                        <textarea name="お問い合わせ内容" id="yourInquiry" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-btn">
+                    <button type="submit">
+                        <img src="../img/btn_send.svg" alt="送信する">
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- ▼ フッター(全ページ共通部分) -->
+    <footer class="footer">
+        <p class="footer-logo">
+            <a href="../index.html">
+                <img src="../img/logo.svg" alt="AQUA">
+            </a>
+        </p>
+        <address class="footer-address">
+            〒123-4567 東京都中区舟入中町4-40<br>
+            TEL・FAX 03-1234-xxxx
+        </address>
+        <div class="footer-sns">
+            <a href="#"><img src="../img/btn_facebook.svg" alt="facebook"></a>
+            <a href="#"><img src="../img/btn_instagram.svg" alt="instagram"></a>
+        </div>
+        <p class="copyright"><small>&copy;Copyright 2019 MdN Corporation.</small></p>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,451 @@
+@charset "utf-8";
+
+/* 
+この演習では先にモバイル端末用の記述を行い、
+後半でメディアクエリの手法を用いてPC端末用の記述を加えていきます。
+（＝「モバイルファースト」）
+*/
+
+/* ▼ 全体に対する基本指定 -----------------------------------------*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: YuGothic,"Yu Gothic",Arial,"メイリオ",Meiryo,sans-serif;
+    color:#111;
+    background-color: #eff9fd;
+    font-weight: 500;
+}
+
+/* ▼ タグに対しての基本指定（+余白などのリセットの記述） -----------------*/
+h1,h2{
+    margin-top: 0;
+    margin-bottom:30px;
+    line-height: 1.2;
+}
+
+a{
+    color:#111;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+ul{
+    margin: 1em 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure{
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+        /* もともと持っている画像のサイズ以上は伸びない */
+    height:auto;
+}
+
+address{
+    font-style: normal;
+        /* フォントをリセット */
+}
+
+/* ▼ 全ページに対する共通指定 ---------------------*/
+
+/* ヘッダー部分 */
+.header{
+    position: relative;
+        /* absolute=btn-bueger */
+        /* 後々追加する記述(三本線をつくるときにいるやつ) */
+    padding: 15px 0 0;
+    /* 余白 */
+    background-color: #fff;
+}
+.logo{
+    width: 140px;
+        /* 画像のサイズを少し小さくする */
+    margin: 0 auto;
+        /* logoを真ん中に寄せる */
+    padding: 5px;
+        /* logoの下に余白 */
+}
+ 
+/* ナビゲーション */
+/* labelタグを目に見える形にする。lavelはインラインなのでブロックに変える */
+.btn-burger{
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: url(../img/burger.svg) center center / 35px 20px no-repeat;
+        /* 二つセットでbackground-position画像を真ん中にする / pxはサイズに値する リピートなし */
+    position: absolute;
+        /* 親要素にrosition:relativeを入れて子要素にabsoluteを入れる */
+    top: 5px;
+    right: 10px;
+    z-index: 2;
+    cursor: pointer;
+        /* カーソルがのったときに指に代わる */
+}
+
+.nav-toggle:checked ~ .btn-burger{
+        /* チェックが入ってる状態のnav-toggleの弟要素である.btn-burger */
+    background: url(../img/close.svg) center center / 26px 26px no-repeat;
+        /* 三本線を押したら×に切り替わる */
+}
+
+.nav{
+    padding-top: 10px;
+    background: url(../img/nav_bg.png) center center / cover no-repeat;
+        /* cover：エリアのところまでいっぱいいっぱいに指定してはみ出たところはカットする */
+}
+
+.nav-list{
+    margin: 0;
+    padding-bottom: 10px;
+    display: none;
+        /* 一回中身を書いてからあとで追加する */
+}
+
+.nav-list li{
+    margin: 0;
+    padding: 10px;
+}
+
+.nav-list a{
+    display: block;
+    color: #fff;
+        /* ホームはaを指定してないので指示はいかない */
+}
+
+.nav-toggle:checked ~ .nav .nav-list{
+        /* チェックが入ってる状態のnav-toggleの弟要素ある.navの中の.nav-list */
+    display: block;
+        /* チェックが入ってるときはメニュー欄が見える */
+}
+
+.nav-toggle{
+    display: none;
+        /* チェックボックスそのものを非表示にする */
+}
+
+/* フッター部分 */
+.footer{
+    padding: 40px 0 30px;
+    color: #032559;
+    text-align: center;
+    background: url(../img/footer_bg.png) center center / cover no-repeat;
+}
+
+.footer-logo{
+    margin-bottom: 10px;
+}
+
+.footer-address{
+    margin: 10px 0;
+}
+
+.footer-sns{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.footer-sns a{
+    display: inline-block;
+        /* 書いても書かなくてもいい */
+    margin: 0 5px;
+}
+
+.footer-sns img{
+    vertical-align: middle;
+        /* 書いても書かなくてもいい */
+        /* 画像の真ん中をそろえる。今回は同じ大きさ何で別にいい */
+}
+
+.copyright{
+    margin: 0;
+}
+
+.copyright small{
+    font-size: 11px;
+}
+
+
+/* メインコンテンツ部分 */
+.section{
+    max-width: 1000px;
+        /* 最大大きさ（1000px以下に縮むことが出来る） */
+    margin: 50px auto;
+    padding: 0 auto;
+}
+
+/* h2 */
+.heading-section{
+    text-align: center;
+}
+
+/* h3 */
+.heading-topic{
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #032559;
+}
+
+/* ▼ トップページに対する固有の指定 ----------------------*/
+.top{
+    height: 200px;
+    margin-bottom: 50px;
+    background: url(../img/top.jpg) center bottom / cover no-repeat;
+        /* 画像によって切れるところを選択 / coverによってはみ出るところはカット */
+}
+
+.col{
+    max-width: 300px;
+        /* どんなけ画面が大きくても300px以下になる */
+    margin: 0 auto 50px;
+}
+
+.col-image{
+    margin-bottom: 10px;
+}
+
+.col p{
+    margin-bottom: 0;
+        /* 説明文に余白を持っていたので打消しの記述 */
+}
+
+/* ▼ 営業案内(guide)ページに対する固有の指定 -------------*/
+.open-time{
+    text-align: center;
+        /* 文字を真ん中にする */
+}
+
+.open-time-list{
+    display: inline-block;
+    margin: 0 0 0 30px;
+    list-style: disc;
+    text-align: left;
+}
+
+.price-table{
+    width: 100%;
+        /* 親要素に対して100% */
+    border-collapse: collapse;
+        /* 線をピタッとさせる */
+    font-size: 12px;
+}
+
+.price-table thead{
+    color: #fff;
+    background-color: #4184e2;
+}
+
+.price-table th,.price-table td{
+    padding: 20px 15px;
+    font-weight: 500;
+    border: 1px solid #707070;
+}
+
+.price-table tbody th{
+    text-align: left;
+        /* 文字を左寄せ */
+    background-color: #fff;
+}
+
+.price-table tbody td{
+    background-color: #fff;
+}
+
+
+
+/* ▼ お問い合わせ(contact)ページに対する固有の指定 -------*/
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-label{
+    display: block;
+        /* インラインのlabelをblockに変える */
+    margin-bottom: 10px;
+    color: #032559;
+}
+
+.form-btn{
+    margin: 30px 0;
+    text-align: center;
+        /* 送信ボタンを画面に対して真ん中に寄せる */
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+        /* 名前入力欄、email入力欄、問い合わせ入力欄 */
+    width: 100%;
+        /* 親要素の100% */
+    padding: 10px;
+    border: 1px solid #999;
+        /* 枠線 */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus{
+        /*  名前入力欄、email入力欄、問い合わせ入力欄をクリックしたとき */
+    border-color:  #032559;
+    outline: none;
+}
+
+button[type="submit"]{
+    background: none;
+    border: none;
+    cursor: pointer;
+        /* カーソルをやると指マークに代わる */
+}
+
+button[type="submit"]:hover{
+    opacity: 0.65;
+        /* マウスを乗っけると画像が少し薄くなる */
+        /* 0~1で表記する */
+}
+
+
+/* ここから768px以上の画面幅用の記述 */
+/* {}の中で書く */
+@media screen and (min-width: 768px) {
+    .header{
+        padding:40px 0 0;
+    }
+
+    .logo{
+        width: auto;
+        margin: 0 0 20px;
+        padding: 0;
+        text-align: center;
+            /* 画面を小さくした時と大きくしたときに画像の大きさが変わる */
+    }
+
+    /* ハンバーガーボタン */
+    .btn-burger{
+        display: none;
+            /* 大きい画面の時はなくす */
+    }
+
+    .nav{
+        padding: 40px 0;
+    }
+
+    .nav-list{
+        display: flex;
+            /* noneからflexにして表示されるかつ、横並びにする */
+        justify-content: center;
+            /* flexで横寄せになった文字を中央寄せにする */
+        align-items: center;
+            /* 今回は書かなくてもセンターになっている */
+        padding: 0;
+    }
+
+    .nav-list li{
+        flex: 0 1 auto;
+        padding: 0 20px;
+            /* 左右に入れることにより文字間をあける */
+        line-height: 1;
+        border-right: 1px solid #fff;
+            /* 横に線を入れる */
+    }
+
+    .nav-list li:first-child{
+        border-left: 1px solid #fff;
+    }
+
+    /* これはわざわざ追記しなくても大丈夫 */
+    /* .nav-toggle:checked ~ .nav .nav-list{
+        display: flex;
+    } */
+
+    /* フッター */
+    .footer{
+        padding: 50px 0 20px;
+    }
+
+    .footer-sns{
+        margin: 30px 0;
+    }
+
+    /* メイン内の共通部分の調整 */
+    .sections{
+        margin-bottom: 100px;
+    }
+
+    .heading-section{
+        margin-bottom: 50px;
+    }
+
+    /* トップページ */
+    .top{
+        height: 378px;
+            /* 画像の大きさを変える */
+        margin-bottom: 70px;
+    }
+
+    /* pc盤ではsectionを横並びにする */
+    .row{
+        display: flex;
+            /* section3つを横並びにする */
+        justify-content: space-between;
+            /* 幅広く均等に */
+    }
+
+    .col{
+        flex: 0 1 32%;
+            /* すべてのcolが均等に32%にきれいに縮まる */
+        margin: 0;
+    }
+
+    /* 営業案内 */
+    .price-table{
+        font-size: 16px;
+    }
+
+    .price-table th,
+    .price-table td{
+        padding: 20px;
+    }
+
+    /* お問い合わせ */
+    .form-group{
+        display: flex;
+            /* 項目名と入力欄が横並びになる */
+        max-width: 800px;
+        margin-bottom: 10px;
+            /* 入力フォームの幅を縮める */
+    }
+
+    .form-label{
+        flex: 0 0 12em;
+        max-width: 12em;
+            /* 項目名に12文字分の横幅を確保 */
+        margin: 0;
+        padding-top: 5px;
+    }
+
+    .form-col{
+        flex: 0 1 100%;
+            /* 入力欄が可能な限り幅が広がる */
+            /* 0 0は伸びの縮みもしない
+            　 0 1は右側が縮む。画面が小さくなれば縮む */
+            /* 項目と入力欄が縦積みになる */
+    }
+
+}

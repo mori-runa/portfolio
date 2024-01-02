@@ -1,0 +1,440 @@
+@charset "utf-8";
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd,
+figure {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a:hover {
+  opacity: .6;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 游ゴシック, YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
+  color: #000;
+  font-size: 12px;
+  background-color: #e9872e;
+}
+
+/*ナビゲーションとfooter部分は、全画面に伸びている。
+残りheaderとメインコンテンツは、メインビジュアルと同じ幅に納まっていることを確認する。
+何度も使いまわしができるように横幅の制御を担当する inner クラスと
+flexと両端揃えのspace-between をする flex クラス を作る */
+
+.inner {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* htmlの headerタグに class名(inner と flex）を追記 */
+
+header {
+  padding: 15px 0;
+}
+
+/* htmlの header ulタグに class名（flex）を追記 */
+
+header ul {
+  margin-top: 20px;
+}
+
+header ul li {
+  margin-left: 15px;
+}
+
+header ul li::before {
+  content: url(../images/icon_dog.gif);
+  margin-right: 5px;
+  vertical-align: -4px;
+}
+
+header ul li a {
+  color: #fceab7;
+  /* aタグのcolor設定*/
+}
+
+/* htmlの nav ulタグに class名（inner と flex）を追記*/
+nav {
+  background-image: url(../images/nav_back.jpg);
+  margin-bottom: 15px;
+}
+
+
+/* htmlの メインビジュアル img（visual.jpg） を囲っているタグに class名を追記*/
+.visual {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/*まず大きく 左側 mein と右側 asaide のコンテンツに分けたいので
+mainタグ と asaideタグを一緒にする divタグを 追記
+さらに class名(inner と flex) を追記する*/
+
+/*------------------
+   左側のコンテンツ
+ ----------------- */
+
+main {
+  /* グルーミングとペットホテルを横並びのために
+  main タグに class名（flex）追記する*/
+  max-width: 675px;
+  /*- 左側全体のコンテンツの幅 ( 330px + margin 15px + 330px )-*/
+  flex-wrap: wrap;
+  /*- 要素を横並びにしつつ、複数行にしたいときのプロパティ (教科書p205)
+  下段のお知らせをカラム落ちさせて、flexを二段にして表現するため -*/
+}
+
+/* 各コンテンツ（グルーミング・ペットホテル）のsectionタグに class名（box）を追記
+下段のコンテンツ(お知らせ)には、sectionタグに class名（info）を追記*/
+
+main .box {
+  max-width: 330px;
+  /*- コンテンツの幅 -*/
+  background-color: #f9ebb6;
+  padding: 10px;
+  box-sizing: border-box;
+  /*- padding、border込み込みのサイズにする -*/
+  margin-bottom: 15px;
+}
+
+main .info {
+  width: 100%;
+  /* 親（meinタグ）と同じ幅(675px)にする */
+  background-color: #f9ebb6;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+main .box h2,
+main .info h2 {
+  margin-bottom: 10px;
+}
+
+/*-
+pタグ（料金表示画像）class名（price）追記
+pタグ（イメージ画像）class名（photo）追記
+pタグ（ボタン画像）class名（btn）追記*/
+main .box .price {
+  /*class名を追記しない場合のセレクタ候補（ main .box p:first-of-type ）*/
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+main .box .photo {
+  float: left;
+  /*- 画像の回り込み(教科書p201) -*/
+  margin-right: 10px;
+}
+
+main .box .btn {
+  /*class名を追記しない場合のセレクタ候補（ main .box p:last-of-type ）*/
+  text-align: right;
+  clear: left;
+  /*- ここで画像の回り込み（float）を解除 
+  clearしなくてもレイアウトは崩れない設計だけど念のためclearしてfloatを解除する-*/
+  margin-top: 10px;
+}
+
+main .info dl {
+  border-top: 1px dashed #000;
+  line-height: 1.8;
+  /*- 既定値 デフォルト 1.2 単位なしが一般的-*/
+  padding-top: 10px;
+}
+
+main .info dt {
+  width: 120px;
+  float: left;
+  /*- 横並び -*/
+  clear: left;
+  /*- すぐにfloatの解除 -*/
+}
+
+main .info .btn {
+  text-align: right;
+}
+
+/*------------------
+   右側のコンテンツ
+ ----------------- */
+aside {
+  width: 260px;
+  /*- 背景画像の幅と同じ数値をいれる -*/
+  height: 360px;
+  padding: 15px;
+  background: #83c8cf url(../images/search_back.jpg) no-repeat;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+aside h3 {
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+aside dl dt {
+  font-weight: bold;
+  /*- 太字 -*/
+  margin-bottom: 10px;
+}
+
+aside dl dd {
+  margin-bottom: 10px;
+}
+
+aside label {
+  margin-right: 1.5em;
+  /*- 1.5文字分の余白 
+  1文字分はその部分のfont-sizeに依存する
+  20pxの文字の 1.5em ならば 30px になるということ-*/
+}
+
+/* 下線を装飾するための class名（ line ）を追記*/
+aside dl .line {
+  border-top: 1px dashed #fff;
+  padding-top: 10px;
+}
+
+footer {
+  background-color: #552200;
+  color: #fff;
+  line-height: 50px;
+  margin-top: 15px;
+}
+
+/* ul に class名（ flex ）を追記*/
+
+/* さらに ulとコピーライトの横並びのために二つを包むdivタグを追記し、
+class名（innerとflex）追記*/
+footer ul li {
+  margin-right: 15px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p {
+  margin-right: 50px;
+}
+
+footer small {
+  font-size: 12px;
+  /*smallタグの既定値は、設定より一段階小さいフォントが表示される仕様なので
+  ここではおおよそ10px相当のサイズになっているので、改めて12pxを指定する*/
+}
+
+
+/*　===============================
+          レスポンシブ 追記
+==================================*/
+
+.nav-toggle {
+  display: none;
+}
+
+.btn-burger {
+  display: none;
+}
+
+nav ul li {
+  width: 190px;
+  height: 47px;
+  padding-top: 2px;
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
+
+nav ul li:last-child {
+  border-right: 1px solid #ccc;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li a span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+}
+
+
+@media screen and (max-width: 960px) {
+  header {
+    padding: 15px;
+  }
+
+  .main_contents {
+    flex-direction: column;
+  }
+
+  main,
+  aside {
+    margin: 0 auto;
+  }
+
+  aside {
+    width: 675px;
+    margin: auto;
+    background-image: none;
+  }
+
+  aside dl {
+    width: 80%;
+    margin: auto;
+  }
+
+  footer {
+    padding: 0 2%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  header {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  h1 {
+    width: calc(100% - 65px);
+    text-align: center;
+
+  }
+
+  header ul li {
+    margin-left: 0;
+  }
+
+  header .flex {
+    width: 200px;
+    margin: 20px auto 0;
+  }
+
+
+  nav .flex {
+    display: none;
+  }
+
+  .btn-burger {
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    z-index: 3;
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: url(../images/burger.svg) center center no-repeat;
+    cursor: pointer;
+  }
+
+  .nav-toggle:checked~nav .flex {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 70px 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-toggle:checked~.btn-burger {
+    background: url(../images/close.svg) center center no-repeat;
+  }
+
+  nav {
+    background-image: none;
+  }
+
+  nav ul li {
+    width: 100%;
+    height: 47px;
+    padding-top: 2px;
+    margin: 10px auto;
+    text-align: center;
+    border-left: none;
+    background: #572c00;
+  }
+
+  nav ul li:last-child {
+    border-right: none;
+  }
+
+
+  main {
+    width: 98%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  main .box {
+    max-width: 100%;
+  }
+
+  main .box h2 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  main .box .price {
+    text-align: center;
+  }
+
+  aside {
+    width: 96%;
+  }
+
+  footer {
+    text-align: center;
+    line-height: 2;
+    padding: 30px 0;
+  }
+
+  footer>.flex {
+    flex-direction: column;
+    width: 75%;
+  }
+
+  footer ul li {
+    margin-right: 0;
+  }
+
+  footer p {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  footer span {
+    display: inline-block;
+  }
+}
