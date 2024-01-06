@@ -2,6 +2,10 @@
 
 /* About me */
 
+/* *{
+    outline: 1px solid #ec0005;
+} */
+
 .about-me, .works, .contact  {
     padding-bottom: 70px;
 }
@@ -24,7 +28,7 @@
 }
 
 .about-me img{
-    width: 400px;
+    width: 450px;
 }
 
 .self{
@@ -54,7 +58,7 @@
 }
 
 .works section{
-    width: 300px;
+    width: 400px;
     margin: 0 10px 50px;
 }
 
@@ -63,7 +67,7 @@
 }
 
 .works img{
-    width: 300px;
+    width: 90%;
 }
 
 .works a{
@@ -76,7 +80,7 @@
 
 .works section .flex{
     justify-content: flex-start;
-    margin-left: 5px;
+    margin-left: 25px;
 }
 
 .tec li{
@@ -138,7 +142,7 @@ article .tec .photo{
 }
 
 .contact .letter{
-    margin: 0 20px 10px;
+    margin: 0 5px 10px;
 }
 
 .contact .my_ph{
@@ -155,31 +159,47 @@ article .tec .photo{
         margin-bottom: 20px;
     }
 
+    .about-me .my_ph img{
+        width: 70%;
+    }
+
 
     .about-me .self .letter{
         letter-spacing: 0.01em;
     }
 
+    .contact{
+        width: 90%;
+    }
+
     .contact .letter{
         font-size: 16px;
     }
-
     .contact .my_ph img{
-	width: 90%;
-	text-align: center;
+        width: 70%;
+        text-align: center;
     }
     
 }
 
 @media screen and (max-width: 499px) {
 
+    h2{
+        font-size: 24px;
+    }
+
+    .h2 p{
+        font-size: 9px;
+    }
+
+    h3{
+        font-size: 16px;
+    }
+
     .inner2{
         width: 90%;
     }
 
-    .about-me .my_ph img{
-        width: 300px;
-    }
 
     .about-me .responsive{
         text-align: center;
@@ -217,6 +237,10 @@ article .tec .photo{
     .news dl dd{
         padding-left: 0;
         font-size: 12px;
+    }
+
+    .contact .letter{
+        font-size: 14px;
     }
     
 }
