@@ -114,6 +114,7 @@ nav ul li .current{
 /* ドロップダウンメニュー */
 ul.drop{
   display:none;
+position: absolute;
 }
 
 /* ドロップダウンメニューのスタイル指定*/
