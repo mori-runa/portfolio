@@ -20,6 +20,11 @@ a{
 }
 
 /* 全体に対する指定 */
+
+/* *{
+    outline: 1px solid #ec0005;
+} */
+
 *{
     box-sizing: border-box;
         /* ボックスの計算を枠含む */
@@ -153,7 +158,6 @@ nav ul li a{
 nav ul li a:hover{
     background-color: rgba(255, 255, 255, 0.2);
     color: #4f372d;
-    border-radius: 10px;
     
 }
 
@@ -336,9 +340,8 @@ article .btn{
     }
 
     nav ul li a:hover{
-        color: rgba(255, 255, 255, 0.6);
-            /* マウスカーソルをのせたときに色を透かせる */
-        background: transparent;
+        color: #fff;
+        background-color: rgba(253, 188, 254, 0.6);
             /* 元の背景色を打ち消すための記述 */
     }
 
@@ -357,6 +360,7 @@ article .btn{
             /* 横幅を指定する前の状態にする */
         line-height: 60px;
             /* 一つ一つのボタンの大きさを確保する */
+        height: 100%;
     }
 
     /* ボタンを押すとnavが消えるようにする navタグを修正 */
@@ -375,8 +379,8 @@ article .btn{
         top: 22px;
         right: 22px;
             /* どこに指定するか指示する */
-            background-image: url(../images/burger_open.png);
-            z-index: 20;
+        background-image: url(../images/burger_open.png);
+        z-index: 20;
             /* ハンバーガーボタンをnavの前に持ってくる */
     }
 
