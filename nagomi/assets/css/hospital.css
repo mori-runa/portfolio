@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+article .about .title{
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.about .title p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.about .title .smoll{
+    color: #ff9c54;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 35px;
+    font-family: YuGothic,"游ゴシック体","Yu Gothic","游ゴシック",Arial,"メイリオ",Meiryo,sans-serif;
+    font-weight: bold;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+article .features{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.box{
+    background-color: #fffbe9;
+    width: 370px;
+    margin: 40px 10px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box .number{
+    font-size: 18px;
+    border-bottom: 1px dotted #dd87aa;
+    padding: 6px;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    letter-spacing: 0.5px;
+}
+
+.box .small{
+    font-size: 16px;
+}
+
+.box .number span{
+    font-size: 22px;
+    color: #fff;
+    margin-right: 5px;
+    font-weight: bold;
+    background-color: #dd87aa;
+    padding: 3px 7px;
+    border-radius: 10px;
+}
+
+.box .wrap{
+    padding: 10px;
+    text-align: center;
+}
+
+.box .wrap p{
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    padding: 3px;
+}
+
+.box .wrap .detail{
+    height: 100px;
+}
+
+.box .wrap .supplement{
+    font-size: 10px;
+    text-align: left;
+    line-height: 1.2em;
+    margin-top: 5px;
+}
+
+section{
+    width: 95%;
+    margin: 80px auto 0;
+}
+
+.coment{
+    text-align: center;
+    margin: 40px auto;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+.coment .note{
+    font-size: 14px;
+    color: #dd87aa;
+}
+
+.point{
+    font-size: 22px;
+    text-align: center;
+    line-height: 2em;
+    letter-spacing: 3px;
+    font-weight: 800;
+    padding-top: 20px; 
+}
+
+.point span{
+    font-size: 30px;
+    font-weight: 600;
+    color: #6cb0e4;
+    background-color: #fff;
+    padding: 0 2px;
+}
+
+.line{
+    border-bottom: 1px solid #79b4e0;
+    margin: 0 20%;
+    margin-bottom: 20px;
+}
+
+.hospital_footer{
+    margin-top: 0;
+}
+
+.handling{
+    background-color: #f8fcff;
+    padding: 30px 0 50px;
+    width: 95%;
+}
+
+.handling ul{
+    margin: 20px auto 0;
+    width: 60%;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+.handling ul li{
+    margin: 5px 0 0;
+}
+
+.handling ul li span{
+    display: block;
+}
+
+.title{
+    text-align: center;
+    line-height: 2em;
+    letter-spacing: 3px;
+    font-weight: 800;
+    padding-top: 20px; 
+}
+
+.title span{
+    font-size: 26px;
+    font-weight: 600;
+    color: #6cb0e4;
+    background-color: #fff;
+    padding: 0 2px;
+}
+
+.text_3 .detail{
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+.text_3 .detail span{
+    display: inline-block;
+}
+
+@media screen and (max-width: 759px) {
+    .coment span{
+        display: block;
+    }
+
+    .handling ul{
+        font-size: 14px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .point{
+        font-size: 20px;
+    }
+
+    .line{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .point span{
+        font-size: 26px;
+    }
+
+    .text_3 .detail{
+        font-size: 14px;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .coment p{
+        font-size: 14px;
+    }
+
+    .coment .note{
+        font-size: 12px;
+    }
+}
+

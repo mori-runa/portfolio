@@ -1,0 +1,337 @@
+@charset "UTF-8";
+
+article .news{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+article .news .title{
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.news .title p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.news .title .smoll{
+    color: #ff9c54;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 35px;
+    font-family: YuGothic,"游ゴシック体","Yu Gothic","游ゴシック",Arial,"メイリオ",Meiryo,sans-serif;
+    font-weight: bold;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+.news dl{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    line-height: 2em;
+    font-size: 14px;
+}
+
+.news dl dt, .news dl dd{
+    box-sizing: border-box;
+}
+
+.news dl dt{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding-left: 20px;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.news dl dd {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  margin-bottom: 7px;
+}
+
+article .features{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.box{
+    background-color: #fffbe9;
+    width: 370px;
+    margin: 40px 10px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.box .number{
+    font-size: 18px;
+    border-bottom: 1px dotted #dd87aa;
+    padding: 6px;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    letter-spacing: 0.5px;
+}
+
+.box .small{
+    font-size: 16px;
+}
+
+.box .number span{
+    font-size: 22px;
+    color: #fff;
+    margin-right: 5px;
+    font-weight: bold;
+    background-color: #dd87aa;
+    padding: 3px 7px;
+    border-radius: 10px;
+}
+
+.box .wrap{
+    padding: 10px;
+    text-align: center;
+}
+
+.box .wrap p{
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    padding: 3px;
+}
+
+.box .wrap .detail{
+    height: 100px;
+}
+
+.box .wrap .supplement{
+    font-size: 10px;
+    text-align: left;
+    line-height: 1.2em;
+    margin-top: 5px;
+}
+
+.director{
+    width: 95%;
+    margin: 40px auto 0;
+}
+
+.director figure{
+    margin: 0 auto;
+    width: 30%;
+}
+
+.director .text{
+    line-height: 2em;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px auto 0;
+}
+
+.director .name{
+    font-size: 28px;
+    text-align: center;
+    color: #ff9c54;
+    font-weight: bold;
+}
+
+.director .name span{
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.director .comment{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+figure img{
+    width: 100%;
+}
+
+.symptoms{
+    background-color: #f8fcff;
+    width: 95%;
+}
+
+.symptoms .title{
+    text-align: center;
+    line-height: 2em;
+    letter-spacing: 3px;
+    font-weight: 800;
+    padding-top: 20px; 
+}
+
+.symptoms .title span{
+    font-size: 26px;
+    font-weight: 600;
+    color: #6cb0e4;
+    background-color: #fff;
+    padding: 0 2px;
+}
+
+.symptoms .line{
+    border-bottom: 1px solid #79b4e0;
+    margin: 0 20%;
+    margin-bottom: 20px;
+}
+
+.symptoms .flex{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.symptoms .flex .flex{
+    width: 100%;
+}
+
+.symptoms .s_box{
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.s_box img{
+    width: 100%;
+}
+
+.s_box .head{
+    flex-grow: 1;
+    line-height: 1.5em;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 10px;
+} 
+
+.s_box .top{
+    padding-top: 24px;
+}
+
+.s_box .head span{
+    font-size: 24px;
+    color: #dd87aa;
+    padding: 0 2px;
+}
+
+.s_box .photo{
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 759px) {
+
+    article .news{
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .news dl{
+        display: block;
+        font-size: 12px;
+
+    }
+
+    .news dl dt{
+        width: 30%;
+        padding-left: 0;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .news dl dd{
+        width: 100%;
+        padding-left: 5%;
+        margin-bottom: 7px;
+    }
+
+    .news .btn a{
+        font-size: 10px;
+    }
+
+    .news .title .smoll{
+        font-size: 15px;
+    }
+
+    .director figure{
+        width: 300px;
+    }
+
+    .director .text{
+        width: 80%;
+    }
+
+    .director .name{
+        font-size: 22px;
+    }
+
+    .symptoms .title{
+        font-size: 14px;
+    }
+
+    .director .comment span{
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 399px) {
+
+    h1 .h1_1, .h1_2, .h1_3{
+        font-size: 12px;
+    }
+
+    .news dl {
+        font-size: 10px;
+    }
+
+    .director figure {
+        width: 80%;
+    }
+
+    .director .text{
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .director .comment {
+        font-size: 12px;
+    }
+
+    .box .small{
+        font-size: 13px;
+    }
+    
+
+    .box .number span{
+        font-size: 20px;
+        padding: 3px 5px;
+    }
+
+    .box .wrap{
+        font-size: 14px;
+    }
+
+    .box .wrap .btn a{
+        font-size: 10px;
+    }
+
+    .box .wrap .supplement{
+        font-size: 9px;
+    }
+
+}

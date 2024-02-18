@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+.treatment_details .wrap{
+    margin: 20px auto;
+    width: 400px;
+}
+
+.treatment_details a{
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #dd87aa;
+    padding: 7px;
+    justify-content: center;
+    color: #dd87aa;
+}
+
+.treatment_details a:hover{
+    background-color: #ffcee286;
+    border: 1px solid #ffcee286;
+    transform: translateY(-5px);
+    transition: all .3s;
+}
+
+.treatment_details .box{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 40px auto 0;
+}
+
+.photo{
+    width: 40%;
+}
+
+.box .photo img{
+    width: 100%;
+}
+
+.box .left{
+    margin-left: 10px;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    width: 60%;
+    padding: 3px 3px 3px 0;
+}
+
+h3{
+    font-size: 22px;
+    color: #696969;
+}
+
+.size{
+    font-size: 18px;
+}
+
+.treatment_details .box .text{
+    margin: 10px 0 5px;
+    color: #999;
+}
+
+.box .text span{
+    display: block;
+}
+
+.treatment_details .blue{
+    background-color: #fff;
+    border: 1px solid #6cb0e4;
+    padding: 7px;
+    justify-content: center;
+    color: #6cb0e4;
+}
+
+.treatment_details .blue:hover{
+    background-color: #c3e4fd86;
+    border: 1px solid #c3e4fd86;
+}
+
+h4{
+    font-size: 24px;
+    border: 2px solid #ff9c54;
+    border-radius: 20px;
+    letter-spacing: 3px;
+    color: #ff9c54;
+    line-height: 1.5em;
+    width: 80%;
+    margin: 50px auto 20px;
+    text-align: center;
+}
+
+.treatment .wrap .flex{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.treatment .wrap .box{
+    line-height: 1.5em;
+    padding: 0 10px; 
+    width: 310px; 
+}
+
+.treatment .box p{
+    text-align: center;
+}
+
+.treatment .box .color{
+    color: #999;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.medical_footer{
+    margin-top: 0;
+}
+
+.access .box{
+    width: 95%;
+    margin: 40px auto 0;
+}
+
+.access .box .detail{
+    width: 50%;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+.access .box .detail .wrap{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.access .box .detail p{
+    padding: 3px 0;
+    font-size: 14px;
+}
+
+.access .box .address{
+    padding: 10px 0;
+}
+
+.access .box .address span{
+    padding-left: 1em;
+}
+
+.access .box .detail dl{
+    margin: 10px 0;
+    font-size: 14px;
+    border-top: 2px dotted #dd87aa;
+    border-bottom: 2px dotted #dd87aa;
+    padding: 10px 0;
+}
+
+.access dl dd{
+    margin-left: 1em;
+}
+
+.access .box .detail .nagomi{
+    font-size: 18px;
+    font-weight: bold;
+    color: #999;
+    padding: 0 0 20px;
+}
+
+.tel a{
+    width: 200px;
+    padding: 5px 0;
+    background-color: #ff9c54;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tel a:hover{
+    background-color: #ffdbc2;
+    color: #ff9c54;
+    font-weight: bold;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+.access .box .map{
+    width: 50%;
+    position: relative;
+    height: 0;
+    padding-top: 40%;
+}
+
+.map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.access_footer{
+    margin-top: 0;
+}
+
+@media screen and (max-width: 1039px) {
+    .access .box .map{
+        padding-top: 50%;
+    }
+}
+
+@media screen and (max-width: 759px) {
+    .access .box{
+        display: block;
+    }
+
+
+    .access .box .detail {
+        margin: 0 auto 20px;
+        width: 80%;
+    }
+
+    .access .box .map {
+        margin: 0 auto;
+        width: 80%;
+    }
+}

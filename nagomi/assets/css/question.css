@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+dl{
+    width: 70%;
+    margin: 40px auto 0;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+dl dt{
+    color: #fff;
+    padding: 10px;
+    background-color: #6cb0e4;
+    border-radius: 10px 10px 0 0;
+    font-size: 18px;
+}
+
+dl dd{
+    padding: 20px 10px 20px 20px;
+    background-color: #f1f9ffc9;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 40px;
+    
+}
+
+dl dt::before{
+    content: "Q.";
+}
+
+@media screen and (max-width: 759px) {
+    dl{
+        width: 85%;
+    }
+}

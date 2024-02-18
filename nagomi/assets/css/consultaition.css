@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+
+
+.supplement{
+    text-align: center;
+    width: 95%;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    margin: 40px 0;
+    color: #ff9c54;
+}
+
+.supplement span{
+    display: inline-block;
+}
+
+.flex{
+    justify-content: space-evenly;
+}
+
+.h2{
+    width: 94%;
+    justify-content: left;
+    margin-top: 80px;
+}
+
+.con_btn {
+    display: block;
+    line-height: 2em;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 150px;
+}
+
+.con_btn a{
+    border: 1px solid #999;
+    color: #999;
+    border-radius: 10px;
+}
+
+.con_btn a:hover{
+    border: 1px solid #6cb0e4;
+    color: #6cb0e4;
+}
+
+.first_btn a:hover{
+    border: 1px solid #dd87aa;
+    color: #dd87aa;
+}
+
+section{
+    width: 70%;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    margin: 40px auto 0;
+}
+
+.first{
+    padding-top: 20px;
+}
+
+h5{
+    font-size: 24px;
+    color: #dd87aa;
+    margin: 20px 0 5px;
+}
+
+.text_1{
+    margin-bottom: 20px;
+    margin-left: 1em;
+}
+
+.text_1 span{
+    display: inline-block;
+}
+
+.text_1 .color{
+    color: #ff6d6d;
+}
+
+.belongings{
+    width: 95%;
+    margin: 0 auto 20px;
+}
+
+.belongings ul{
+    font-size: 20px;
+}
+
+.belongings ul li{
+    font-size: 16px;
+    list-style: circle;
+    margin: 3px 0 3px 2em;
+}
+
+.belongings .note{
+    font-size: 14px;
+    margin-left: 2em;
+    color: #999;
+}
+
+.belongings .note span{
+    display: inline-block;
+}
+
+.flow{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.title_2{
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.title_2::before{
+    content: "【";
+    margin-right: 3px;
+}
+
+.title_2::after{
+    content: "】";
+    margin-left: 3px;
+}
+
+.box_2{
+    margin-left: 1em;
+    margin-bottom: 20px;
+}
+
+.box_title{
+    font-size: 20px;
+    margin: 5px 0;
+    display: inline-block;
+    color: #999;
+}
+
+.box_title span{
+    margin-right: 5px;
+}
+
+.box_2 .text{
+    margin-left: 1.5em
+}
+
+.box_2 .text span{
+    display: inline-block;
+}
+
+.box_2 .text .note{
+    font-size: 14px;
+    color: #999;
+    margin-left: 1em;
+}
+
+.box_2 .btn{
+    margin-left: 1em;
+    border: none;
+}
+
+.pink{
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.again h5{
+    color: #6cb0e4;
+}
+
+.again ul li{
+    margin-left: 2.5em;
+    list-style: circle;
+}
+
+.again{
+    border-radius: 10px;
+}
+
+.again .btn a{
+    color: #6cb0e4;
+}
+
+.again .btn a:hover{
+    color: #fff;
+    background-color: #6cb0e4;
+}
+
+@media screen and (max-width: 759px) {
+    section{
+        width: 80%;
+    }
+
+    .h2{
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    section{
+        width: 90%;
+    }
+
+    .text_1{
+        font-size: 14px;
+    }
+
+    .box_title{
+        font-size: 18px;
+    }
+
+    .text{
+        font-size: 14px;
+    }
+
+    .text .note{
+        font-size: 12px;
+    }
+}
